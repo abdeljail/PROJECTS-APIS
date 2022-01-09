@@ -1,0 +1,279 @@
+:root {
+  --BC-BODY: #141c2f;
+  --BC-USER: #1f2a48;
+  --CH: rgb(1, 8, 29);
+  --CB: #121a2d;
+  --C: #e3e3e3;
+  --C1: rgb(10 10 10);
+  --P: #9ca1a8;
+  --CL: #151e31;
+}
+/* :root {
+  --BC-BODY: #fafafa;
+  --BC-USER: #f0f2f4;
+  --CB: #efefef;
+  --CH: rgb(10 10 10);
+  --C: #141c2f;
+  --P: #5e5e5e;
+  --CL: #efefef;
+} */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--C);
+}
+
+header,
+.container,
+.header-user form,
+header div:last-child,
+.res-user .content-user,
+.res-user .content-user > div:last-child .info-formation div,
+.res-user .content-user > div:last-child .info-account,
+.res-user .content-user > div:last-child .info-account div,
+.res-user .content-user > div:last-child .contact,
+.res-user .content-user > div:last-child .contact div {
+  display: flex;
+}
+
+header div:last-child,
+header,
+.res-user .content-user > div:last-child .info-formation div,
+.res-user .content-user > div:last-child .info-account,
+.res-user .content-user > div:last-child .info-account div,
+.res-user .content-user > div:last-child .contact {
+  justify-content: space-between;
+}
+header div:last-child,
+.header-user form,
+header,
+.res-user .content-user > div:last-child .info-account div,
+.res-user
+  .content-user
+  > div:last-child
+  .contact
+  m.res-user
+  .content-user
+  > div:last-child
+  .contact
+  div {
+  align-items: center;
+}
+
+.header-user button,
+header div:last-child {
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all ease 0.3s;
+  padding: 0.8rem;
+}
+
+.header-user button,
+.header-user input {
+  border: none;
+  outline: none;
+}
+
+header div:last-child span,
+h1,
+.header-user button {
+  text-transform: uppercase;
+}
+
+.res-user .content-user > div:last-child .info-formation p,
+.res-user .content-user > div:last-child .info-formation div time {
+  color: var(--P);
+}
+.res-user .content-user > div:last-child .info-formation div h2,
+.res-user .content-user > div:last-child .info-account div,
+.res-user .content-user > div:last-child .contact div span,
+footer a {
+  text-transform: capitalize;
+}
+
+body{
+  
+}
+body {
+  background-color: var(--BC-BODY);
+  font-size: 1rem;
+}
+h1 {
+  font-size: 24px;
+}
+img {
+  width: 16px;
+  max-width: 16px;
+}
+.container {
+  width: 50rem;
+  height: 80vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: stretch;
+  flex-direction: column;
+}
+header div:last-child {
+  width: 54px;
+}
+header div:last-child span {
+  font-size: 0.59rem;
+  padding-right: 0.2rem;
+}
+header div:last-child:hover {
+  background-color: var(--CH);
+}
+.header-user input {
+  color: var(--C);
+  background: none;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  flex-grow: 7;
+}
+
+.header-user img {
+  flex-grow: 1;
+}
+.header-user button {
+  flex-grow: 2;
+  background-color: #0079fe;
+  font-weight: 700;
+}
+.header-user button:hover {
+  box-shadow: -92px -1px 68px -16px #035ec4 inset;
+}
+.header-user,
+.res-user {
+  padding: 1.5rem;
+  background-color: var(--BC-USER);
+  border-radius: 10px;
+  border: 2px solid var(--CB);
+}
+.res-user {
+  margin-top: 1rem;
+  position: relative;
+  height: 380px;
+}
+.res-user > .overly {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.res-user > .overly div {
+  background-color: var(--BC-BODY);
+}
+.res-user > .overly div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.res-user .overly div::after {
+  content: "";
+  left: 0%;
+  height: 100%;
+  position: absolute;
+  background-color: var(--CL);
+  box-shadow: 0 0 1px 1px var(--CL);
+  animation: loding 1s infinite linear;
+  left: -40px;
+  opacity: 0.5;
+}
+
+@keyframes loding {
+  0% {
+    width: 0%;
+    opacity: 0.5;
+  }
+  25% {
+    width: 20%;
+    opacity: 0.5;
+  }
+  50% {
+    width: 40%;
+    opacity: 0.5;
+  }
+  70% {
+    width: 60%;
+    opacity: 0.7;
+  }
+  80% {
+    width: 120%;
+    opacity: 0.8;
+    left: 120%;
+  }
+  100% {
+    width: 120%;
+    opacity: 0.8;
+    left: 120%;
+  }
+}
+
+.res-user .content-user {
+  padding-top: 1rem;
+}
+.res-user .content-user > div:first-child {
+  flex-basis: 150px;
+}
+.res-user .content-user > div:first-child img {
+  width: 100px;
+  max-width: 100px;
+  height: 100px;
+  min-height: 100px;
+  border-radius: 50%;
+  border: 2px solid var(--CB);
+}
+.res-user .content-user > div:last-child {
+  flex-grow: 2;
+}
+.res-user .content-user > div:last-child .info-formation div h2 {
+  margin: 0;
+}
+.res-user .content-user > div:last-child .info-formation div time {
+  font-size: 14px;
+}
+.res-user .content-user > div:last-child .info-formation small {
+  color: var(--CH);
+}
+.res-user .content-user > div:last-child .info-account {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--BC-BODY);
+  border-radius: 6px;
+}
+.res-user .content-user > div:last-child .info-account div {
+  flex-direction: column;
+  line-height: 1.5;
+}
+.res-user .content-user > div:last-child .info-account div span {
+  font-size: 17px;
+  font-weight: bold;
+}
+.res-user .content-user > div:last-child .contact {
+  margin-top: 2rem;
+  padding: 2rem 0 0;
+  border-top: 1px solid var(--BC-BODY);
+  flex-wrap: wrap;
+  line-height: 2.1;
+}
+.res-user .content-user > div:last-child .contact div {
+  width: 50%;
+}
+.res-user .content-user > div:last-child .contact div span {
+  padding-left: 10px;
+  font-size: 14px;
+}
+footer {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+footer a {
+  text-decoration: none;
+  background: #07080a;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+}

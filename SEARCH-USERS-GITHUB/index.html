@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <main class="container">
+      <header>
+        <div>
+          <h1>octocat</h1>
+        </div>
+        <div role="button" id="change-lyout">
+          <span>light</span>
+          <img
+            id="src-img"
+            src="./images/solid-black-sun-symbol.png"
+            alt="icon light and dark"
+          />
+        </div>
+      </header>
+      <div class="body-user">
+        <div class="header-user">
+          <div>
+            <form onsubmit="return false;">
+              <img src="./images/magnifying-glass.png" alt="" srcset="" />
+              <input
+                id="input-search"
+                type="search"
+                placeholder="Search GITHUB username"
+              />
+              <button type="button" id="btn-search">search</button>
+            </form>
+          </div>
+        </div>
+        <div class="res-user">
+          <div id="overly" class="overly">
+            <div></div>
+          </div>
+          <div class="content-user">
+            <div class="img-user">
+              <img id="img-user" src="" alt="image  user" />
+            </div>
+            <div class="info-user" id="info-user">
+              <div class="info-formation">
+                <div>
+                  <h2 id="name-user"></h2>
+                  <time id="date-time" datetime=""></time>
+                </div>
+                <small id="small-user"></small>
+                <p id="bio-user"></p>
+              </div>
+              <div class="info-account">
+                <div>
+                  <small>repos</small>
+                  <span id="repos-user"></span>
+                </div>
+                <div>
+                  <small>followers</small>
+                  <span id="followers-user"></span>
+                </div>
+                <div>
+                  <small>following</small>
+                  <span id="following-user"></span>
+                </div>
+              </div>
+              <div class="contact">
+                <div>
+                  <img src="images/location-pin.png" alt="icon location" />
+                  <span id="location-user"></span>
+                </div>
+                <div>
+                  <img src="images/share.png" alt="icon blog" />
+                  <span id="blog-user"></span>
+                </div>
+                <div>
+                  <img src="images/twitter.png" alt="icon " />
+                  <span id="twitter-user"></span>
+                </div>
+                <div>
+                  <img src="images/condo.png" alt="icon company" />
+                  <span id="company-user"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <a href="http://" target="_blank" rel="noopener noreferrer"
+          >code source in git hup</a
+        >
+      </footer>
+    </main>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
