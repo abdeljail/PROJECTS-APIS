@@ -1,0 +1,122 @@
+body{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+*{
+    box-sizing: border-box;
+}
+img {
+  width: 300px;
+  max-width: 300px;
+  height: 300px;
+  max-height: 300px;
+  border-radius: 6px;
+  border: 2px solid rgb(211, 211, 211);
+  margin: 10px 0;
+}
+
+.Parent-loading {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  background: #0d0d0e;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: opacity 1s cubic-bezier(0.83, 0.01, 0.75, 0.71);
+  -moz-transition: opacity 1s cubic-bezier(0.83, 0.01, 0.75, 0.71);
+  -ms-transition: opacity 1s cubic-bezier(0.83, 0.01, 0.75, 0.71);
+  -o-transition: opacity 1s cubic-bezier(0.83, 0.01, 0.75, 0.71);
+  transition: opacity 1s cubic-bezier(0.83, 0.01, 0.75, 0.71);
+}
+
+.loding-animation-holder {
+  width: 100px;
+  height: 100px;
+  transform: rotate(45deg);
+  position: relative;
+}
+
+.loading-animator {
+  width: 50%;
+  height: 50%;
+  float: left;
+  border-radius: 50%;
+  background: #c4b422e3;
+  transform: rotate(0deg);
+  position: relative;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  opacity: 1;
+}
+
+.loading-animator:nth-child(1) {
+  transform-origin: bottom right;
+  animation: loading 3s cubic-bezier(0.46, -0.1, 0.2, 1.5) infinite;
+}
+
+.loading-animator:nth-child(2) {
+  transform-origin: bottom left;
+  animation: loading 3s 0.3s cubic-bezier(0.46, -0.1, 0.2, 1.5) infinite;
+}
+
+.loading-animator:nth-child(4) {
+  transform-origin: top left;
+  animation: loading 3s 0.4s cubic-bezier(0.46, -0.1, 0.2, 1.5) infinite;
+}
+
+.loading-animator:nth-child(3) {
+  transform-origin: top right;
+  animation: loading 3s 0.5s cubic-bezier(0.46, -0.1, 0.2, 1.5) infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+  35% {
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+  65% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.middle-circle {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 47.5px;
+  left: 47.5px;
+  border-radius: 100%;
+  border: 1px solid #000;
+  background: #ffeb3b;
+}
+.Parent-loading .lod h1 {
+  color: #fff;
+  margin-left: 60px;
+  font-family: fantasy;
+  font-weight: normal;
+}
+.Parent-loading .lod span {
+  color: #fff;
+  margin-left: 80px;
+  font-size: 14px;
+}
